@@ -1,5 +1,6 @@
 [
   "hubot-slack-google-auth",
+  "hubot-slack-gcal",
   "hubot-diagnostics",
   "hubot-help",
   "hubot-heroku-keepalive",
