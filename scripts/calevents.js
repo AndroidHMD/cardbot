@@ -10,7 +10,7 @@
 
 module.exports = function(robot) {
   var _ = require('underscore'),
-      helpers = require('../lib/helpers'),
+      helpers = require('../lib/calhelpers'),
       Util = require("util"),
       Fs = require("fs"),
       googleapis = require('googleapis');

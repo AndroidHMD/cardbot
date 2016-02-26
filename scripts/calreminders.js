@@ -8,7 +8,7 @@
 module.exports = function(robot) {
   var _ = require('underscore'),
       Util = require("util"),
-      helpers = require('../lib/helpers'),
+      helpers = require('../lib/calhelpers'),
       googleapis = require('googleapis'),
       CALLBACK_URL= process.env.HUBOT_URL + "/google/calendar/webhook",
       uuid = require('node-uuid'),
