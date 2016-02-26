@@ -6,6 +6,7 @@
   "description": "Highly intelligent robot mechanism managing our Slack team and helping us achieve world domination",
   "dependencies": {
     "hubot": "^2.18.0",
+    "hubot-slack-google-auth": "0.1.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-fliptable": "^1.2.0",
     "hubot-google-images": "^0.2.6",
