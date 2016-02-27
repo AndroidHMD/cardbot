@@ -5,9 +5,9 @@
   "author": "codingInSpace <jonathan.grangien@gmail.com>",
   "description": "Highly intelligent robot mechanism managing our Slack team and helping us achieve world domination",
   "dependencies": {
+    "express": ">= 3.0.0 < 4.0.0",
+    "googleapis": "1.0.21",
     "hubot": "^2.18.0",
-    "hubot-slack-google-auth": "0.1.0",
-    "hubot-slack-gcal": "0.1.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-fliptable": "^1.2.0",
     "hubot-google-images": "^0.2.6",
@@ -22,14 +22,15 @@
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.4.2",
+    "hubot-slack-gcal": "0.1.0",
+    "hubot-slack-google-auth": "0.1.0",
+    "hubot-twitter-search": "^1.0.3",
     "hubot-victory": "^1.4.0",
     "hubot-youtube": "^1.0.1",
-    "underscore": "1.7.0",
-    "express": ">= 3.0.0 < 4.0.0",
-    "node-uuid": "1.4.2",
-    "googleapis": "1.0.21",
     "moment": "^2.8.4",
-    "twix": "^0.6.3"
+    "node-uuid": "1.4.2",
+    "twix": "^0.6.3",
+    "underscore": "1.7.0"
   },
   "engines": {
     "node": "0.10.x"
