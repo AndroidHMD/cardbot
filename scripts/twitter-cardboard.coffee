@@ -18,11 +18,11 @@
 #   none
 #
 # Author:
-#   eric@softwareforgood based on scripts by gkoo and timdorr
+#   Jonathan based on scripts by eric@softwareforgood, gkoo, timdorr
 #
 
 TWIT = require "twit"
-MENTION_ROOM = process.env.HUBOT_TWITTER_MENTION_ROOM || "#general"
+MENTION_ROOM = process.env.HUBOT_TWITTER_MENTION_ROOM
 #INTERVAL_MINUTES = process.env.HUBOT_TWITTER_INTERVAL_MINUTES
 
 config =
@@ -42,9 +42,20 @@ receiveAndPost = (robot) ->
 	twit = getTwit()
 	id = process.env.HUBOT_TWITTER_FOLLOWING_ID
 	stream = twit.stream('statuses/filter', follow: id)
+	date = new Date
 
 	stream.on 'tweet', (tweet) -> 
-		message = "Tweet by googlecardboard! http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id_str}"
-		robot.messageRoom MENTION_ROOM, message
-		return	
+		n = date.getDay()
+
+		if n == 1 or n == 3 or n == 5
+			h = date.getHours()
+
+			if h >= 9 and h <= 16
+				message = "Tweet by @googlecardboard! http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id_str}"
+				robot.messageRoom MENTION_ROOM, message
+				return	
+			else
+				return
+		else
+			return
 

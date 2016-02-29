@@ -10,6 +10,12 @@
 
 module.exports = (robot) ->
 
+	robot.hear /timedetails/i, (res) ->
+		d = new Date
+		n = d.getDay()
+		h = d.getHours()
+		res.send "day is " + n + " and hours are " + h
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
