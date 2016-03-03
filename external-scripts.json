@@ -15,5 +15,6 @@
 	"hubot-plusplus",
 	"hubot-victory",
 	"hubot-fliptable",
-	"hubot-slack-vote"
+	"hubot-slack-vote",
+	"hubot-heroku-keepalive"
 ]
