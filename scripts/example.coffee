@@ -13,7 +13,7 @@ module.exports = (robot) ->
 	robot.hear /timedetails/i, (res) ->
 		d = new Date
 		n = d.getDay()
-		h = d.getHours()
+		h = d.getUTCHours() + 1
 		res.send "day is " + n + " and hours are " + h
 
   # robot.hear /badger/i, (res) ->

@@ -48,9 +48,9 @@ receiveAndPost = (robot) ->
 		n = date.getDay()
 
 		if n == 1 or n == 3 or n == 5
-			h = date.getHours()
+			h = date.getUTCHours() + 1
 
-			if h >= 9 and h <= 16
+			if h >= 9 and h < 16
 				message = "Tweet by @googlecardboard! http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id_str}"
 				robot.messageRoom MENTION_ROOM, message
 				return	
